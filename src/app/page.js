@@ -1,7 +1,8 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import styles from './page.module.css'
 
-export default function Home() {
+export default function Home({ data }) {
   return (
     <main className={styles.main}>
       <div className={styles.description}>
@@ -90,6 +91,18 @@ export default function Home() {
           </p>
         </a>
       </div>
+      <div>
+      {/* Rendera data här */}
+      <pre>{JSON.stringify(data, null, 2)}</pre>
+    </div>
+    <div>
+      <h1>Välkommen till Väderappen</h1>
+      <ul>
+        <li><Link href="/cities/stockholm">Väder i Stockholm</Link></li>
+        <li><Link href="/cities/goteborg">Väder i Göteborg</Link></li>
+        <li><Link href="/cities/malmo">Väder i Malmö</Link></li>
+      </ul>
+    </div>
     </main>
   )
 }
