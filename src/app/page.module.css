@@ -7,6 +7,19 @@
   min-height: 100vh;
 }
 
+.citypage {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 6rem;
+  min-height: 100vh;
+}
+
+.footer-adjustment {
+  margin-top: -20rem;
+}
+
 .description {
   display: inherit;
   justify-content: inherit;
@@ -199,6 +212,14 @@
       rgb(var(--background-end-rgb)) 40%
     );
     z-index: 1;
+  }
+
+  .spacer {
+    height: 60px;
+  }
+
+  .greeter {
+    margin-bottom: 20px;
   }
 }
 

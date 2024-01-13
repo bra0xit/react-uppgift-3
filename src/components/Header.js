@@ -4,9 +4,7 @@ const Header = () => {
     return (
         <header>
             <nav>
-                <Link href="/"><a>Startsida</a></Link>
-                <Link href="/about"><a>Om Oss</a></Link>
-                <Link href="/contact"><a>Kontakt</a></Link>
+                <Link href="/">Startsida</Link>
             </nav>
         </header>
     );

@@ -1,15 +1,16 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import styles from './page.module.css'
+import Image from 'next/image';
+import Link from 'next/link';
+// import ColorButton from '@/components/ColorButton'
+import styles from './page.module.css';
+// import SearchBox from '../components/SearchBox.client';
+import Greeter from '../components/Greeter'; 
+
 
 export default function Home({ data }) {
   return (
     <main className={styles.main}>
       <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
+      
         <div>
           <a
             href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
@@ -28,81 +29,20 @@ export default function Home({ data }) {
           </a>
         </div>
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+      
       <div>
-      {/* Rendera data här */}
-      <pre>{JSON.stringify(data, null, 2)}</pre>
-    </div>
-    <div>
-      <h1>Välkommen till Väderappen</h1>
+      <Greeter/>
+      <div className={styles.spacer}></div>
       <ul>
         <li><Link href="/cities/stockholm">Väder i Stockholm</Link></li>
-        <li><Link href="/cities/goteborg">Väder i Göteborg</Link></li>
-        <li><Link href="/cities/malmo">Väder i Malmö</Link></li>
+        <li><Link href="/cities/paris">Väder i Paris</Link></li>
+        <li><Link href="/cities/london">Väder i London</Link></li>
       </ul>
     </div>
+      <div>
+      <pre>{JSON.stringify(data, null, 2)}</pre>
+      </div>
+
     </main>
   )
 }
